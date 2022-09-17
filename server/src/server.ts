@@ -16,7 +16,7 @@ app.get('/games', async (req, res) => {
     include: {
       _count: {
         select: {
-          Ads: true
+          ads: true
         } as any
       }
     }
