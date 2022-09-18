@@ -23,14 +23,15 @@ A aplicação web exibe os jogos cadastrados na API e permite adicionar um anún
   * __Node__ + __Express__ + __Cors__
   * __Prisma ORM__ com SQLite
 * Front-end
-  * <ins>React + Vite + Typescript</ins>
-  * <ins>TailwindCSS</ins> para estilização.
-  * <ins>Radix-UI</ins> para fazer a tela de modal e Checkbox.
-  * <ins>Phosphor-react</ins> para exibir ícones.
-  * Acesso à API com <ins>Axios</ins>
+  * __React + Vite + Typescript__
+  * __TailwindCSS__ para estilização.
+  * __Radix-UI__ para fazer a tela de modal e Checkbox.
+  * __Phosphor-react__ para exibir ícones.
+  * Acesso à API com __Axios__
 * Mobile
   * __Expo-Clipboard__ para copiar texto
   * __Phosphor-react-native__ para exibir ícones.
+<br />
 
 ## :car: Iniciando a aplicação
 Baixe o repositório com git clone e entre na pasta do projeto.
@@ -59,7 +60,7 @@ $ expo start
 ```
 
 ## :camera_flash: Screenshots
-![](https://github.com/luiizsilverio/nlw-esports/blob/master/web/src/assets/logo-nlw-esports.gif)
+![](https://github.com/luiizsilverio/nlw-esports/blob/master/web/src/assets/nlw-esports.gif)
 
 ## :balance_scale: Licença
 Este projeto está licenciado sob a [licença MIT](LICENSE).
