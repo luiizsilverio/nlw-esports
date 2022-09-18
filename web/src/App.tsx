@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
+import axios from 'axios';
 
 import './styles/main.css';
 import 'tailwindcss/tailwind.css';
@@ -7,7 +8,6 @@ import logoImg from './assets/logo-nlw-esports.svg';
 import GameBanner from './components/GameBanner';
 import AdBanner from './components/AdBanner';
 import { AdModal } from './components/AdModal';
-import axios from 'axios';
 
 interface IGame {
   id: string;
@@ -34,15 +34,15 @@ function App() {
 
       <div className="grid grid-cols-6 gap-6 mt-16">
         {
-          games.map(game => (
+          games.map((game, index) => (
             <GameBanner
               title={game.title}
               bannerUrl={game.bannerUrl}
               adsCount={game._count.ads}
               key={game.id}
             />
-          ))
-        }
+            ))
+          }
       </div>
 
       <Dialog.Root>
