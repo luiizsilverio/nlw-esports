@@ -8,6 +8,7 @@ import { Background } from '../../components/Background';
 import { GameCard, GameCardProps } from '../../components/GameCard';
 import { Heading } from '../../components/Heading';
 import { styles } from './styles';
+import { ENV } from '../../utils/env';
 // import { GAMES } from '../../utils/games';
 
 export function Home() {
@@ -19,7 +20,7 @@ export function Home() {
   }
 
   useEffect(() => {
-    fetch('http://192.168.100.7:3333/games')
+    fetch(`${ENV.API_BASE_URL}/games`)
       .then(response => response.json())
       .then(data => {
         setGames(data)

@@ -31,5 +31,15 @@ export const styles = StyleSheet.create({
     fontFamily: THEME.FONT_FAMILY.SEMI_BOLD,
     fontSize: THEME.FONT_SIZE.SM,
     marginLeft: 8
+  },
+  avatar: {
+    width: 90,
+    height: 90,
+    borderRadius: 45,
+    marginTop: 24
+  },
+  username: {
+    color: 'white',
+    lineHeight: 32
   }
 });

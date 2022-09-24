@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 import { GameController } from 'phosphor-react-native';
 import * as AuthSession from 'expo-auth-session'
 
+import { ENV } from '../../utils/env';
 import logoImg from '../../assets/logo-nlw-esports.png';
 import { Background } from '../../components/Background';
 import { Heading } from '../../components/Heading';
@@ -12,14 +13,32 @@ import { styles } from './styles';
 import { THEME } from '../../theme';
 
 export function SignIn() {
+  const [usuario, setUsuario] = useState("");
+  const [avatar, setAvatar] = useState("");
+
+  const navigation = useNavigation()
 
   async function handleDiscordSignIn() {
 
     const response = await AuthSession.startAsync({
-      authUrl: "https://discord.com/api/oauth2/authorize?client_id=1023216165314625546&redirect_uri=https%3A%2F%2Fauth.expo.io%2F%40luiizsilverio%2Fesports&response_type=token&scope=identify"
+      authUrl: ENV.DISCORD_REDIRECT_URL
     })
 
-    console.log(response);
+    fetch('https://discord.com/api/users/@me', {
+      headers: {
+        'authorization': `Bearer ${response.params.access_token}`
+      }
+    })
+      .then(response => response.json())
+      .then(data => {
+        // console.log(data);
+        setUsuario(data.username);
+        setAvatar(`https://cdn.discordapp.com/avatars/${data.id}/${data.avatar}`);
+
+        setTimeout(() => {
+          navigation.navigate('home');
+        }, 1500);
+      });
   }
 
   return (
@@ -43,6 +62,17 @@ export function SignIn() {
 
           <Text style={styles.buttonTitle}>Entrar com Discord</Text>
         </TouchableOpacity>
+
+        {avatar && (
+            <>
+              <Image
+                source={{ uri: avatar }}
+                resizeMode="cover"
+                style={styles.avatar}
+              />
+              <Text style={styles.username}>{usuario}</Text>
+            </>
+          )}
 
       </SafeAreaView>
     </Background>
