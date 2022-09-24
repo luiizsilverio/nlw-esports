@@ -27,6 +27,7 @@ A aplicação web exibe os jogos cadastrados na API e permite adicionar um anún
   * __TailwindCSS__ para estilização.
   * __Radix-UI__ para fazer a tela de modal e Checkbox.
   * __Phosphor-react__ para exibir ícones.
+  * __Keen-Slider__ para fazer o carrossel de imagens.
   * Acesso à API com __Axios__
 * Mobile
   * __Expo-Clipboard__ para copiar texto
