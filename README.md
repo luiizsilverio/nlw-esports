@@ -18,9 +18,7 @@ Aplicação desenvolvida durante o NLW eSports, promovido pela Rocketseat.<br />
 Durante o evento, foram desenvolvidas 3 aplicações, uma API em Node, uma aplicação React com Vite e um App em React Native.<br />
 A aplicação web exibe os jogos cadastrados na API e permite adicionar um anúncio de busca de jogador. A aplicação mobile faz a mesma coisa.<br />
 <br />
-<blockquote>
-  Foram feitas melhorias na aplicação original, a saber: carrossel responsivo de imagens na aplicação React e autenticação com Discord na aplicação mobile.
-</blockquote>
+>Foram feitas melhorias na aplicação original, a saber: carrossel responsivo de imagens na aplicação React e autenticação com Discord na aplicação mobile.
 <br />
 
 ## :hammer_and_wrench: Tecnologias
