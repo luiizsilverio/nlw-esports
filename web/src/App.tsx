@@ -24,19 +24,19 @@ function App() {
   const [ref] = useKeenSlider<HTMLDivElement>({
     breakpoints: {
       "(min-width: 480px)": {
-        slides: { perView: 2, spacing: 1 },
+        slides: { perView: 2.5, spacing: 1 },
       },
-      "(min-width: 700px)": {
-        slides: { perView: 4, spacing: 1 },
+      "(min-width: 660px)": {
+        slides: { perView: 3.5, spacing: 1 },
       },
-      "(min-width: 900px)": {
-        slides: { perView: 5, spacing: 1 },
+      "(min-width: 840px)": {
+        slides: { perView: 4.5, spacing: 1 },
       },
-      "(min-width: 1100px)": {
+      "(min-width: 1000px)": {
         slides: { perView: 6, spacing: 1 },
       }
     },
-    slides: { perView: 1 },
+    slides: { perView: 1.5 },
     mode: "free-snap"
   })
 
