@@ -13,6 +13,7 @@ import { DuoMatch } from '../../components/DuoMatch';
 import logoImg from '../../assets/logo-nlw-esports.png';
 import { styles } from './styles';
 import { THEME } from '../../theme';
+import { ENV } from '../../utils/env';
 
 export function Game() {
   const [duos, setDuos] = useState<DuoCardProps[]>([]);
@@ -26,14 +27,14 @@ export function Game() {
   }
 
   function getDiscordUser(adsId: string) {
-    fetch(`http://192.168.100.2:3333/ads/${adsId}/discord`)
+    fetch(`${ENV.API_BASE_URL}/ads/${adsId}/discord`)
     .then(response => response.json())
     .then(data => setDiscordSel(data.discord))
     .catch(erro => console.warn(erro));
   }
 
   useEffect(() => {
-    fetch(`http://192.168.100.2:3333/games/${game.id}/ads`)
+    fetch(`${ENV.API_BASE_URL}/games/${game.id}/ads`)
       .then(response => response.json())
       .then(data => setDuos(data))
       .catch(erro => console.warn(erro));

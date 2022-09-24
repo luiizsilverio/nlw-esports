@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "mobile",
-    "slug": "mobile",
+    "name": "esports",
+    "slug": "esports",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "esports",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
