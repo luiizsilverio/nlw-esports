@@ -26,14 +26,14 @@ export function Game() {
   }
 
   function getDiscordUser(adsId: string) {
-    fetch(`http://192.168.100.2:3333/ads/${adsId}/discord`)
+    fetch(`http://192.168.100.7:3333/ads/${adsId}/discord`)
     .then(response => response.json())
     .then(data => setDiscordSel(data.discord))
     .catch(erro => console.warn(erro));
   }
 
   useEffect(() => {
-    fetch(`http://192.168.100.2:3333/games/${game.id}/ads`)
+    fetch(`http://192.168.100.7:3333/games/${game.id}/ads`)
       .then(response => response.json())
       .then(data => setDuos(data))
       .catch(erro => console.warn(erro));
